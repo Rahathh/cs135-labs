@@ -25,11 +25,10 @@ int main() {
         cout << "31 days";
     }
     else if (month == 2) {
-        if (year % 4 != 0 && year % 100 == 0 || year % 400 != 0) {
-            cout << "28 days";
-        }
-        else {
-            cout << "29 days";
+        if (year % 4 == 0 && year % 100 != 0|| (year % 400 == 0)) {
+            cout << "29 days" << endl;
+        } else {
+            cout << "28 days" << endl;
         }
     } else {
         cout << "30 days";
