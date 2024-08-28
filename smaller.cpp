@@ -5,6 +5,8 @@ Instructor: Tong Yi
 Assignment: Lab1A
 
 Find the smaller num
+
+
 */
 
 
