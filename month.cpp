@@ -31,6 +31,8 @@ int main() {
         else {
             cout << "29 days";
         }
+    } else {
+        cout << "30 days";
     }
     return 0;
 }
