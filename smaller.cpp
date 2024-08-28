@@ -4,8 +4,8 @@ Course: CSCI-5
 Instructor: Tong Yi
 Assignment: Lab1A
 
-Find the smaller num
-
+Write a program smaller.cpp that asks the user to input two integer numbers 
+and prints out the smaller of the two.
 
 */
 
