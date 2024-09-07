@@ -13,14 +13,14 @@ using namespace std;
 
 int main() {
     string name1, name2, name3;
-    
+
     cout << "Please enter best friend #1: " << endl;
     cin >> name1;
     cout << "Please enter best friend #2: " << endl;
     cin >> name2;
     cout << "Please enter best friend #3: " << endl;
     cin >> name3;
-    
+
     cout << name1 << endl;
     cout << name2 << endl;
     cout << name3 << endl;
