@@ -12,8 +12,8 @@ Writing 3 names and printing each of them, everyone one in a new line
 using namespace std;
 
 int main() {
-    cout << "Mico\n";
-    cout << "Emil\n";
-    cout << "Tafsir\n";
+    cout << "Jennifer\n";
+    cout << "Daniel\n";
+    cout << "Dorothy\n";
     return 0;
 }
