@@ -25,9 +25,9 @@ int main() {
 	while (num < 0 || num > 100) {
 		cout << "Please re-enter: ";
 		cin >> num;
-		if (num > 0 && num < 100) {
-			cout << "Number squared is" << " " << pow(num, 2);
-		}
+	}
+	if (num > 0 && num < 100) {
+		cout << "Number squared is" << " " << pow(num, 2);
 	}
 	return 0;
 }
