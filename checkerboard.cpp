@@ -17,9 +17,9 @@ using namespace std;
 
 int main() {
     int width, height;
-    cout << "Input width: ";
+    cout << "Input width: " << endl;
     cin >> width;
-    cout << "Input height: ";
+    cout << "Input height: " << endl;
     cin >> height;
 
     for (int n = 0; n < height; n++) {
