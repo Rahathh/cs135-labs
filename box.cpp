@@ -20,7 +20,7 @@ Also, print a line Shape: between user input and the printed shape (to separate 
 using namespace std;
 
 int main() {
-    int width, height, count;
+    int width, height;
     cout << "Input width: ";
     cin >> width;
     cout << "Input height: ";
