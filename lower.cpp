@@ -17,7 +17,7 @@ int main() {
     int side_length;
 
     // Input the side length
-    cout << "Input side length: ";
+    cout << "Input side length: " << endl;
     cin >> side_length;
 
     // Print the bottom-left half of the square
