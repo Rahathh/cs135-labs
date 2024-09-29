@@ -17,19 +17,26 @@ Also, print a line Shape: between user input and the printed shape (to separate 
 
 */
 #include <iostream>
+
 using namespace std;
 
 int main() {
     int width, height;
-    cout << "Input width: ";
+    
+    cout << "Input width: " << endl;
     cin >> width;
-    cout << "Input height: ";
+
+    cout << "Input height: " << endl;
     cin >> height;
+
     for (int n = 0; n < height; n++) {
         for (int i = 0; i < width; i++) {
             cout << "*";
         }
         cout << endl;
     }
+
     return 0;
+}
+
 }
