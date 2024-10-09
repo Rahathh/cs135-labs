@@ -14,7 +14,11 @@ return true, otherwise return false.
 #include <iostream>
 using namespace std;
 
-bool isDivisibleBy(int n, int d){
+bool isDivisibleBy(int n, int d){	
+	if (d == 0) {
+	cout << "No" << endl;
+	return false;
+	}
 	return (n % d) == 0;
 	}
 	int main() {
