@@ -47,8 +47,20 @@ int nextPrime(int n) {
     return candidate;
 }
 
+int countPrimes(int a, int b) {
+    int count = 0;
+    for (int i = a; i <= b; i++) {
+        if (isPrime(i)) {
+            count++;
+        }
+    }
+    return count;
+}
+
 int main() {
-    int num1, num2, num3;
+    int num1, num2, num3, a, b;
+    
+    // Part 1: Divisibility test
     cout << "Enter the first integer number: ";
     cin >> num1;
     cout << "Enter the second integer number: ";
@@ -56,23 +68,27 @@ int main() {
     cout << "Enter the third integer number: ";
     cin >> num3;
 
-    isDivisibleBy(num1, num2);
     if (num1 % num2 == 0) {
         cout << "Yes" << endl;
-    }
-    else {
+    } else {
         cout << "No" << endl;
     }
 
+    // Part 2: Prime check
     if (isPrime(num3)) {
         cout << num3 << " is a prime number." << endl;
-    }
-    else {
+    } else {
         cout << num3 << " is not a prime number." << endl;
     }
 
-    // Test the nextPrime function
+    // Part 3: Next prime test
     cout << "The next prime after " << num3 << " is " << nextPrime(num3) << "." << endl;
+
+    // Part 4: Count primes in range
+    cout << "Enter the range (a and b) to count primes (a ≤ x ≤ b):" << endl;
+    cin >> a >> b;
+    cout << "The number of primes between " << a << " and " << b << " is " << countPrimes(a, b) << "." << endl;
 
     return 0;
 }
+
