@@ -19,43 +19,60 @@ figure out if its a prime number
 #include <iostream>
 using namespace std;
 
-bool isDivisibleBy(int n, int d){
-	if (d == 0) {
-		cout << "No" << endl;
-		return false;
-	}
-	return (n % d) == 0;
-	}
-bool isPrime(int n) {
-	if (n <= 1) {
-		return false;
-	}
-	for (int i = 2; i < n; i++) {
-		if (n % i == 0) {
-			return false;
-		}
-	}
-	return true;
+bool isDivisibleBy(int n, int d) {
+    if (d == 0) {
+        cout << "No" << endl;
+        return false;
+    }
+    return (n % d) == 0;
 }
-	int main() {
-		int num1, num2, num3;
-		cout << "Enter the first integer number: ";
-		cin >> num1;
-		cout << "Enter the second integer number: ";
-		cin >> num2;
-		cout << "Enter the third integer number: ";
-		cin >> num3;
-		isDivisibleBy(num1, num2);
-			if (num1 % num2 == 0) {
-				cout << "Yes" << endl;
-			}
-			else {
-				cout << "No" << endl;
-			}
-			if (isPrime(num3)) {
-				cout << num3 << " " << "is a prime number." << endl;
-			}
-			else {
-				cout << num3 << " " << "is not a prime number." << endl;
-			}
-	}
+
+bool isPrime(int n) {
+    if (n <= 1) {
+        return false;
+    }
+    for (int i = 2; i < n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int nextPrime(int n) {
+    int candidate = n + 1;
+    while (!isPrime(candidate)) {
+        candidate++;
+    }
+    return candidate;
+}
+
+int main() {
+    int num1, num2, num3;
+    cout << "Enter the first integer number: ";
+    cin >> num1;
+    cout << "Enter the second integer number: ";
+    cin >> num2;
+    cout << "Enter the third integer number: ";
+    cin >> num3;
+
+    isDivisibleBy(num1, num2);
+    if (num1 % num2 == 0) {
+        cout << "Yes" << endl;
+    }
+    else {
+        cout << "No" << endl;
+    }
+
+    if (isPrime(num3)) {
+        cout << num3 << " is a prime number." << endl;
+    }
+    else {
+        cout << num3 << " is not a prime number." << endl;
+    }
+
+    // Test the nextPrime function
+    cout << "The next prime after " << num3 << " is " << nextPrime(num3) << "." << endl;
+
+    return 0;
+}
