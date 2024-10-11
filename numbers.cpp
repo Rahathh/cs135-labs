@@ -64,6 +64,14 @@ bool isTwinPrime(int n) {
     return (isPrime(n - 2) || isPrime(n + 2));
 }
 
+int nextTwinPrime(int n) {
+    int candidate = n + 1;
+    while (!isTwinPrime(candidate)) {
+        candidate++;
+    }
+    return candidate;
+}
+
 int main() {
     int num1, num2, num3, a, b;
 
@@ -106,7 +114,11 @@ int main() {
         cout << twinPrimeCandidate << " is not a twin prime." << endl;
     }
 
+    // Part 6: Next twin prime test
+    cout << "The next twin prime after " << twinPrimeCandidate << " is " << nextTwinPrime(twinPrimeCandidate) << "." << endl;
+
     return 0;
 }
+
 
 
