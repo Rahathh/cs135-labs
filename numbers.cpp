@@ -72,6 +72,15 @@ int nextTwinPrime(int n) {
     return candidate;
 }
 
+int largestTwinPrime(int a, int b) {
+    for (int i = b; i >= a; i--) {
+        if (isTwinPrime(i)) {
+            return i;
+        }
+    }
+    return -1;  // No twin prime found
+}
+
 int main() {
     int num1, num2, num3, a, b;
 
@@ -117,8 +126,19 @@ int main() {
     // Part 6: Next twin prime test
     cout << "The next twin prime after " << twinPrimeCandidate << " is " << nextTwinPrime(twinPrimeCandidate) << "." << endl;
 
+    // Part 7: Largest twin prime in range
+    cout << "Enter the range (a and b) to find the largest twin prime: ";
+    cin >> a >> b;
+    int largestTwin = largestTwinPrime(a, b);
+    if (largestTwin == -1) {
+        cout << "There are no twin primes in the range " << a << " to " << b << "." << endl;
+    } else {
+        cout << "The largest twin prime between " << a << " and " << b << " is " << largestTwin << "." << endl;
+    }
+
     return 0;
 }
+
 
 
 
