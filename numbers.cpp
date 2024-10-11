@@ -57,9 +57,16 @@ int countPrimes(int a, int b) {
     return count;
 }
 
+bool isTwinPrime(int n) {
+    if (!isPrime(n)) {
+        return false;
+    }
+    return (isPrime(n - 2) || isPrime(n + 2));
+}
+
 int main() {
     int num1, num2, num3, a, b;
-    
+
     // Part 1: Divisibility test
     cout << "Enter the first integer number: ";
     cin >> num1;
@@ -89,6 +96,17 @@ int main() {
     cin >> a >> b;
     cout << "The number of primes between " << a << " and " << b << " is " << countPrimes(a, b) << "." << endl;
 
+    // Part 5: Twin prime check
+    cout << "Enter a number to check if it is a twin prime: ";
+    int twinPrimeCandidate;
+    cin >> twinPrimeCandidate;
+    if (isTwinPrime(twinPrimeCandidate)) {
+        cout << twinPrimeCandidate << " is a twin prime." << endl;
+    } else {
+        cout << twinPrimeCandidate << " is not a twin prime." << endl;
+    }
+
     return 0;
 }
+
 
