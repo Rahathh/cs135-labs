@@ -81,30 +81,33 @@ public:
 // dynamically allocate memory for a particle and initialize it
 Particle* createParticle(double x, double y, double z, double vx, double vy, double vz) {
     Particle *p = new Particle();
-    // incorrect but correct: *p = {x, y, z, vx, vy, vz};
-
+    p->x = x;
+    p->y = y;
+    p->z = z;
+    p->vx = vx;
+    p->vy = vy;
+    p->vz = vz;
     return p;
 }
 
 // set its velocity to (vx, vy, vz)
 void setVelocity(Particle *p, double vx, double vy, double vz) {
-    p -> vx = vx;
-    p -> vy = vy;
-    p -> vz = vz;
+    p->vx = vx;
+    p->vy = vy;
+    p->vz = vz;
 }
 
 // get its current position
 Coord3D getPosition(Particle *p) {
-    Coord3D cord = {p -> x, p -> y, p -> z};
-
+    Coord3D cord = {p->x, p->y, p->z};
     return cord;
 }
 
 // update particle's position after elapsed time dt
 void move(Particle *p, double dt) {
-    p -> x += p -> vx;
-    p -> y += p -> vy;
-    p -> z += p -> vz;
+    p->x += p->vx * dt;
+    p->y += p->vy * dt;
+    p->z += p->vz * dt;
 }
 
 // delete all memory allocated for the particle passed by pointer
@@ -132,3 +135,4 @@ int main() {
     // remove the particle, deallocating its memory
     deleteParticle(p);
 }
+
