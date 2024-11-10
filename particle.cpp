@@ -25,32 +25,6 @@ Implement these five functions. deleteParticle must delete all dynamically alloc
 
 Here is a usage example of the class and its programming interface. It models accelerated motion of a particle, which is done by making the velocity of the particle increase on each time step.
 
-int main() {
-    // make new particle
-    Particle *p = createParticle(1.0, 1.5, 2.0, 0.1, 0.2, 0.3);
-    double time = 0.0;
-    double dt = 0.1;
-    while(time < 3.0) {
-        // update its velocity
-        setVelocity(p, 10.0 * time, 0.3, 0.1);
-
-        // move the particle
-        move(p, dt);
-        time += dt;
-
-        // reporting its coordinates
-        cout << "Time: " << time << " \t";
-        cout << "Position: "
-             << getPosition(p).x << ", "
-             << getPosition(p).y << ", "
-             << getPosition(p).z << endl;
-    }
-    // remove the particle, deallocating its memory
-    deleteParticle(p);
-}
-Expected output:
-
-$ ./a.out
 Time: 0.1 	Position: 1, 1.53, 2.01
 Time: 0.2 	Position: 1.1, 1.56, 2.02
 Time: 0.3 	Position: 1.3, 1.59, 2.03
