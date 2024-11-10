@@ -38,12 +38,16 @@ string * createAPoemDynamically() {
 }
 
 int main() {
-    while(true) {
-        string *p;
-        p = createAPoemDynamically();
+    // Finite loop for demonstration
+    for(int i = 0; i < 1; ++i) {  // Change 1 to any desired number of iterations
+        string *p = createAPoemDynamically();
 
-        // assume that the poem p is not needed at this point
+        // Assume the poem is not needed at this point
+        cout << *p << endl; // Display the poem (optional)
 
-        delete p;
+        delete p; // Properly delete the dynamically allocated memory
     }
+
+    // Program ends cleanly without infinite memory allocation
+    return 0;
 }
