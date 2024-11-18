@@ -1,7 +1,7 @@
 /*
 Author: Rahat HAssan
 Course: CSCI-135
-Instructor: Genady Maryash
+Instructor: Tong yi
 Assignment: Lab 10A, 10B, 10C, 10D, 10E
 
 TASK A:
